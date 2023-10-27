@@ -12,6 +12,7 @@ ipykernel = "*"
 lxml = "*"
 html5lib = "*"
 beautifulsoup4 = "*"
+matplotlib = "*"
 
 [dev-packages]
 ipykernel = "*"
