@@ -13,9 +13,12 @@ lxml = "*"
 html5lib = "*"
 beautifulsoup4 = "*"
 matplotlib = "*"
+seaborn = "*"
+jupyter = "*"
 
 [dev-packages]
 ipykernel = "*"
+notebook = "*"
 
 [requires]
 python_version = "3.11"
