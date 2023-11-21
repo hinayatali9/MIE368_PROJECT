@@ -1,5 +1,4 @@
 import pandas as pd
-from fuzzywuzzy import process
 
 def select_players(player_csv_file, goalie_csv_file, season):
     # Read the CSV files
@@ -86,11 +85,14 @@ def select_players(player_csv_file, goalie_csv_file, season):
             team_name = team_names[team]
 
             # Get the players for the team
-            team_players = df_forwards[df_forwards['TM'] == team]['PLAYER'].tolist() + df_defensive[df_defensive['TM'] == team]['PLAYER'].tolist() + df_goalies[df_goalies['TM'] == team]['PLAYER'].tolist()
+            team_players = df_forwards[df_forwards['TM'] == team]['PLAYER'].tolist() + df_defensive[df_defensive['TM'] == team]['PLAYER'].tolist()
 
             # Write the team and players to the file
-            f.write(f"{team_name}={team_players}\n")
+            f.write(f"{team_name}_{season}={team_players}\n")
+
+            # Write the team and goalies to the file
+            f.write(f"{team_name}_goalies_{season}={df_goalies[df_goalies['TM'] == team]['PLAYER'].tolist()}\n")
 
 # Use the function
-select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2018)
-select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2021)
+select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2019)
+# select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2022)

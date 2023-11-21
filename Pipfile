@@ -19,6 +19,7 @@ fuzzywuzzy = "*"
 black = "*"
 unidecode = "*"
 python-levenshtein = "*"
+flake8 = "*"
 
 [dev-packages]
 ipykernel = "*"
