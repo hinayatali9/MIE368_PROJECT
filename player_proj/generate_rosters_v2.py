@@ -1,5 +1,4 @@
 import pandas as pd
-from fuzzywuzzy import process
 
 def select_players(player_csv_file, goalie_csv_file, season):
     # Read the CSV files
@@ -96,4 +95,4 @@ def select_players(player_csv_file, goalie_csv_file, season):
 
 # Use the function
 select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2019)
-select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2022)
+# select_players('player_proj\skaters_1996_2023.csv', 'player_proj\goalies_1996_2023.csv', 2022)
